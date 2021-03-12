@@ -1,7 +1,8 @@
 const express = require("express");
 const router = express.Router();
-const Item = require("../../model/item");
 const auth = require("../../middleware/auth");
+//Item Model
+const Item = require("../../model/item");
 
 //@route  GET /api/items/
 //@desc   GET all items
