@@ -5,7 +5,8 @@ function auth(req, res, next) {
   //   console.log(token);
 
   //Check for token
-  if (!token) res.status(401).json({ msg: "No token, authorization denied" });
+  if (!token)
+    return res.status(401).json({ msg: "No token, authorization denied" });
   try {
     //Verify token
     const decoded = jwt.verify(token, "process.env.jwtSecretkey");
